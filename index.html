@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+
+    <nav class="header fixed-top" style="background-color: #fff">
+      <div class="row" style="margin: 5px 10px">
+        <div class="col-1 icon-header flex items-center col-sm-1">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="col-8 col-sm-8 icon-header">
+          <div class="search">
+            <input
+              type="text"
+              value="Kem đánh răng"
+              style="font-size: 15px; color: rgb(115, 115, 115)"
+              disabled
+            />
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="col-1 icon-header flex items-center col-sm-1">
+          <i class="fas fa-share"></i>
+        </div>
+        <div class="col-1 icon-header flex items-center col-sm-1">
+          <i class="fas fa-cart-plus"></i>
+        </div>
+        <div class="col-1 icon-header flex items-center col-sm-1">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div>
+
+      <div class="row tabs" style="margin: 0 10px">
+        <div class="menu-item col-3 col-sm-3 tab-item active">
+          <p class="title-nav text-center">Tổng quan</p>
+        </div>
+        <div class="menu-item col-3 col-sm-3 tab-item">
+          <p class="title-nav text-center">Đánh giá</p>
+        </div>
+        <div class="menu-item col-3 col-sm-3 tab-item">
+          <p class="title-nav text-center">Mô tả</p>
+        </div>
+        <div class="menu-item col-3 col-sm-3 tab-item">
+          <p class="title-nav text-center">Thông tin</p>
+        </div>
+      </div>
+
+      <div style="height: 5px; background-color: whitesmoke"></div>
+
+      <!-- Tab content -->
+      <div class="tab-content">
+        <div class="tab-pane active"></div>
+        <div class="tab-pane"></div>
+        <div class="tab-pane"></div>
+        <div class="tab-pane"></div>
+      </div>
+    </nav>
+
+    <script>
+      $(document).ready(function () {
+        const tabs = $(".tab-item");
+        const panes = $(".tab-pane");
+
+        const tabActive = $(".tab-item.active");
+        const line = $(".tabs .line-tab");
+
+        tabs.each(function (index) {
+          const pane = panes.eq(index);
+
+          $(this).on("touchstart click", function (e) {
+            e.preventDefault();
+            $(".tab-item.active").removeClass("active");
+            $(".tab-pane.active").removeClass("active");
+
+            $(this).addClass("active");
+            pane.addClass("active");
+          });
+        });
+      });
+    </script>
+
+
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper" style="margin-top: 105px">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            class="img-product"
+            src="https://haycafe.vn/wp-content/uploads/2022/03/Hinh-anh-nui-Phu-Si-dep.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-product"
+            src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-product"
+            src="https://haycafe.vn/wp-content/uploads/2022/03/Hinh-anh-nui-Phu-Si-dep.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-product"
+            src="https://wall.vn/wp-content/uploads/2019/11/hinh-anh-phong-canh-da-lat-2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="img-product"
+            src="https://haycafe.vn/wp-content/uploads/2022/03/Hinh-anh-nui-Phu-Si-dep.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="margin: 15px 18px 5px 18px">
+        <p class="title" style="color: #fe2c55">
+          Ưu đãi độc quyền giảm giá 50%
+        </p>
+        <div>
+          <span class="mall">Mall</span>
+          <span style="font-size: 17px">Kem đánh răng</span>
+          <span style="margin-left: 10px"><i class="fas fa-bookmark"></i></span>
+        </div>
+        <div class="flex">
+          <div class="col-4 col-sm-4">
+            <span><i class="fas fa-star star"></i></span>
+            <span><span style="font-weight: 600">4.9</span>/5 (8.6k)</span>
+          </div>
+          <div class="col-4 col-sm-4">
+            <span>Đã bán</span>
+            <span style="font-weight: 600">(39.5k)</span>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12">
+          <span><i class="fas fa-trophy"></i></span>
+          <span>Sản phẩm bán chạy</span>
+        </div>
+      </div>
+      <div class="row about">
+        <div class="col-4 col-sm-4 flex content-center items-center">
+          <span><i class="fas fa-money-check-alt"></i></span>
+          <span class="text-about">Thanh toán bảo mật</span>
+        </div>
+        <div
+          class="col-4 col-sm-4 flex content-center items-center"
+          style="padding: 0"
+        >
+          <span><i class="fas fa-file-excel"></i></span>
+          <span class="text-about">Hủy đơn dễ dàng</span>
+        </div>
+        <div class="col-4 col-sm-4 flex content-center items-center">
+          <span><i class="fas fa-comment"></i></span>
+          <span class="text-about">Đội ngũ hỗ trợ 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="voucher">
+      <p class="title">Voucher & Khuyến mãi</p>
+      <div class="transport">
+        <p class="text-voucher col-12 col-sm-12">Miễn phí vận chuyển</p>
+        <div class="flex">
+          <div class="col-9 col-sm-9">
+            <span
+              >Giảm <span style="color: #fe2c55">30000đ</span> phí vận chuyển
+              đối với các đơn hàng trị giá từ
+              <span style="color: #fe2c55">30000đ</span> trở lên.</span
+            >
+          </div>
+          <div class="col-3 col-sm-3">
+            <button
+              class="wrapper outline small"
+              data-toggle="modal"
+              data-target="#ModalCenter"
+            >
+              Nhận
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="discount">
+        <p class="text-voucher col-12 col-sm-12" style="color: #000">
+          Voucher giảm giá <span style="color: rgb(66, 201, 221)">50%</span>
+        </p>
+        <div class="flex">
+          <div class="col-9 col-sm-9">
+            <span
+              >Mã ưu đãi giảm giá
+              <span style="color: rgb(66, 201, 221)">50%</span> giá trị sản phảm
+              sử dụng trong 1 ngày kể từ khi nhận mã giảm giá.</span
+            >
+          </div>
+          <div class="col-3 col-sm-3">
+            <button
+              class="wrapper outline outline-2 small"
+              data-toggle="modal"
+              data-target="#ModalCenter"
+            >
+              Sử dụng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div style="margin: 10px 18px">
+      <div>
+        <p class="title">Hình thức thanh toán</p>
+        <p style="margin-left: 5px">
+          <span
+            style="
+              background-color: rgb(58, 182, 125);
+              color: #fff;
+              padding: 3px;
+              border-radius: 4px;
+              font-size: 14px;
+            "
+            >COD</span
+          >
+          <span style="color: rgb(115, 115, 115)"
+            >Thanh toán bằng tiền mặt (COD)</span
+          >
+        </p>
+        <div class="line-small" style="margin: 5px 0"></div>
+        <p class="title">Vận chuyển</p>
+        <p style="margin-left: 5px; color: rgb(115, 115, 115)">Từ Hà Nội</p>
+        <p style="margin-left: 5px; color: rgb(115, 115, 115)">
+          Ngày giao hàng dự kiến: 2-3 ngày
+        </p>
+        <div class="line-small" style="margin: 5px 0"></div>
+        <p class="title">Chính sách đổi trả</p>
+        <p style="margin-left: 5px; color: rgb(115, 115, 115)">
+          Trả hàng trong vòng 7 ngày. Hủy đơn dễ dàng
+        </p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div style="margin: 0px 18px 10px 18px">
+      <div style="margin-bottom: 20px">
+        <p class="title" style="font-size: 18px">
+          Đánh giá của khách hàng (8.6k)
+        </p>
+        <p>
+          <span><span style="font-weight: 600">4.9</span> / 5</span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+        </p>
+      </div>
+      <div>
+        <div class="account-item flex items-center">
+          <img
+            class="avatar"
+            src="https://tse3.mm.bing.net/th?id=OIP.ARKjkmC8CHiN18CdgXJ9ngHaHa&pid=Api&P=0&h=220"
+            alt=""
+          />
+          <div class="item-info">
+            <p class="nickname">maitien001</p>
+            <p class="time">{{formatDateTime 1 0 0 3 35 }}</p>
+          </div>
+        </div>
+        <div>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+          <span><i class="fas fa-star star"></i></span>
+        </div>
+        <p style="color: rgb(137, 135, 135); font-size: 14px">
+          Mặt hàng: Kem đánh răng
+        </p>
+        <p>Sản phẩm chất lượng</p>
+      </div>
+      <div style="margin: 10px 0">
+        <div class="row">
+          <div class="col-3 col-sm-3">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#exampleModalCenter1"
+            >
+              <img
+                style="width: 100%"
+                src="https://down-tx-vn.img.susercontent.com/93c8754cb38d4a51b5324bfa0cef8655.webp"
+                alt=""
+              />
+            </button>
+
+            <div
+              class="modal fade"
+              id="exampleModalCenter1"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalCenter1Title"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body" style="padding: 0">
+                    <img
+                      style="width: 100%"
+                      src="https://down-tx-vn.img.susercontent.com/93c8754cb38d4a51b5324bfa0cef8655.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 col-sm-3">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#exampleModalCenter2"
+            >
+              <img
+                style="width: 100%"
+                src="https://toplist.vn/images/800px/vinh-ha-long-quang-ninh-16081.jpg"
+                alt=""
+              />
+            </button>
+
+            <div
+              class="modal fade"
+              id="exampleModalCenter2"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalCenter2Title"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body" style="padding: 0">
+                    <img
+                      style="width: 100%"
+                      src="https://toplist.vn/images/800px/vinh-ha-long-quang-ninh-16081.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line-small"></div>
+      <p class="title" style="font-size: 18px; margin-top: 17px">
+        Đánh giá của khách hàng dành cho cửa hàng
+      </p>
+      <p class="title" style="font-size: 18px">(32.9k)</p>
+      <div style="font-size: 15px">
+        <div class="row" style="margin: 10px 0">
+          <div
+            class="col-12 col-sm-12 flex content-center"
+            style="border: 2px solid rgb(217, 217, 217); border-radius: 3px"
+          >
+            <span style="margin-right: 3px"><i class="fas fa-camera"></i></span>
+            <span>Có Hình ảnh / Video (6.9k)</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-6 col-sm-6 flex content-center"
+            style="border: 2px solid rgb(217, 217, 217); border-radius: 3px"
+          >
+            <span>5</span>
+            <span style="margin-left: 2px"
+              ><i class="fas fa-star star"></i
+            ></span>
+            <span> (31.6k)</span>
+          </div>
+          <div
+            class="col-6 col-sm-6 flex content-center"
+            style="
+              border: 2px solid rgb(217, 217, 217);
+              border-left: none;
+              border-radius: 3px;
+            "
+          >
+            <span>4</span>
+            <span style="margin-left: 2px"
+              ><i class="fas fa-star star"></i
+            ></span>
+            <span> (1.2k)</span>
+          </div>
+        </div>
+        <div class="row" style="margin: 10px 0">
+          <div
+            class="col-6 col-sm-6 flex content-center"
+            style="border: 2px solid rgb(217, 217, 217); border-radius: 3px"
+          >
+            <span>3</span>
+            <span style="margin-left: 2px"
+              ><i class="fas fa-star star"></i
+            ></span>
+            <span>(0)</span>
+          </div>
+          <div
+            class="col-6 col-sm-6 flex content-center"
+            style="
+              border: 2px solid rgb(217, 217, 217);
+              border-left: none;
+              border-radius: 3px;
+            "
+          >
+            <span>Dưới 2</span>
+            <span style="margin-left: 2px"
+              ><i class="fas fa-star star"></i
+            ></span>
+            <span>(0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div style="margin: 0px 18px 10px 18px">
+      <div class="row info-shop">
+        <div class="col-3 col-sm-3 flex content-center items-center">
+          <img
+            style="width: 100%"
+            src="https://tse3.mm.bing.net/th?id=OIP.ARKjkmC8CHiN18CdgXJ9ngHaHa&pid=Api&P=0&h=220"
+            alt=""
+          />
+        </div>
+        <div class="col-6 col-sm-6 m-auto">
+          <p class="name">SHOP CỦA TIẾN</p>
+          <p>
+            <span class="mall">Mall</span>
+            <span><i class="fas fa-star star"></i></span> <span>4.9</span>
+          </p>
+        </div>
+        <div class="col-3 col-sm-3 flex content-center items-center">
+          <button class="wrapper outline small">Truy cập</button>
+        </div>
+      </div>
+      <div class="row info-total">
+        <div
+          class="col-2 col-sm-2"
+          style="border-right: 1px solid rgb(222, 222, 222); font-size: 13px"
+        >
+          <p class="total">39</p>
+          <p>Mặt hàng</p>
+        </div>
+        <div
+          class="col-2 col-sm-2"
+          style="border-right: 1px solid rgb(222, 222, 222); font-size: 13px"
+        >
+          <p class="total">39</p>
+          <p>Đã bán</p>
+        </div>
+        <div
+          class="col-4 col-sm-4"
+          style="border-right: 1px solid rgb(222, 222, 222); font-size: 13px"
+        >
+          <p class="total">
+            <span>96%</span>
+            <span
+              style="
+                color: #fe2c55;
+                font-weight: 400;
+                background: rgba(254, 44, 85, 0.06);
+                padding: 5px;
+                margin-left: 20px;
+              "
+              >Cao</span
+            >
+          </p>
+          <p>Tỉ lệ trả lời 24h</p>
+        </div>
+        <div class="col-4 col-sm-4">
+          <p class="total">96%</p>
+          <p>Xuất kho trong 48h</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div style="margin: 0px 18px 10px 18px">
+      <div class="title">Giới thiệu về sản phẩm này</div>
+    </div>
+
+    <div
+      style="
+        margin: 0px 18px 10px 18px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 7px;
+        padding: 20px 25px;
+        box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 20px -5px;
+      "
+    >
+      <div>
+        <p class="title text-center" style="font-size: 20px; font-weight: 700">
+          THÔNG TIN ĐẶT HÀNG
+        </p>
+      </div>
+      <div class="form-item">
+        <input
+          class="form-input"
+          type="text"
+          placeholder="Họ và tên"
+          name="name"
+        />
+      </div>
+      <div class="form-item">
+        <input
+          class="form-input"
+          type="text"
+          placeholder="Số điện thoại"
+          name="phone"
+        />
+      </div>
+      <div class="form-item">
+        <input
+          class="form-input"
+          type="text"
+          placeholder="Địa chỉ"
+          name="address"
+        />
+      </div>
+      <div class="form-item">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="combo"
+            id="combo-1"
+            value="option1"
+          />
+          <label class="form-check-label" for="combo-1">
+            Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ: 298.000vnđ)
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="combo"
+            id="combo-2"
+            value="option1"
+          />
+          <label class="form-check-label" for="combo-2">
+            Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ: 298.000vnđ)
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="combo"
+            id="combo-3"
+            value="option1"
+          />
+          <label class="form-check-label" for="combo-3">
+            Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ: 298.000vnđ)
+          </label>
+        </div>
+      </div>
+      <div class="content-center" style="width: 100%; margin-top: 15px">
+        <button class="wrapper primary">Mua ngay</button>
+      </div>
+    </div>
+
+    <div>
+      <p class="flex content-center" style="font-size: 20px; font-weight: 600">
+        SHOP CỦA TIẾN
+      </p>
+      <p class="flex content-center m-auto">
+        <span style="margin-right: 5px"
+          ><i class="fas fa-map-marker-alt"></i
+        ></span>
+        <span class="title-about">Địa chỉ: </span>
+        <span> Trương Định</span>
+      </p>
+      <p class="flex content-center m-auto">
+        <span style="margin-right: 5px"
+          ><i class="fas fa-phone-volume"></i
+        ></span>
+        <span class="title-about">Hotline: </span>
+        <span> 182828</span>
+      </p>
+      <p class="flex content-center m-auto">
+        <span style="margin-right: 5px"><i class="fas fa-envelope"></i></span>
+        <span class="title-about">Email: </span>
+        <span> mtmtm@gmail.com</span>
+      </p>
+      <p class="flex content-center m-auto">
+        <span style="margin-right: 5px"><i class="fab fa-tiktok"></i></span>
+        <span class="title-about">Tikok: </span>
+        <span> mtmtm@gmail.com</span>
+      </p>
+    </div>
+
+    <div style="height: 87px"></div>
+
+    <div
+      class="modal fade"
+      id="ModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="ModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: rgb(245, 245, 245)">
+          <div style="padding: 15px">
+            <p class="text-center title">KEM ĐÁNH RĂNG NHẬT BẢN</p>
+          </div>
+          <div class="">
+            <div
+              style="
+                margin: 0px 18px 10px 18px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 7px;
+                padding: 20px 25px;
+                box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 20px -5px;
+              "
+            >
+              <div>
+                <p
+                  class="title text-center"
+                  style="font-size: 20px; font-weight: 700"
+                >
+                  THÔNG TIN ĐẶT HÀNG
+                </p>
+              </div>
+              <div class="form-item">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="Họ và tên"
+                  name="name"
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="Số điện thoại"
+                  name="phone"
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="Địa chỉ"
+                  name="address"
+                />
+              </div>
+              <div class="form-item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="combo"
+                    id="combo-1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="combo-1">
+                    Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ:
+                    298.000vnđ)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="combo"
+                    id="combo-2"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="combo-2">
+                    Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ:
+                    298.000vnđ)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="combo"
+                    id="combo-3"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="combo-3">
+                    Mua 1 Máy Cắt Tỉa Lông - Giá: 149.000vnđ (Giá cũ:
+                    298.000vnđ)
+                  </label>
+                </div>
+              </div>
+              <div class="content-center" style="width: 100%; margin-top: 15px">
+                <button class="wrapper primary">Mua ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var isMobile = window.matchMedia(
+          "only screen and (max-width: 768px)"
+        ).matches; // Kiểm tra nếu là thiết bị mobile
+
+        var slidesToShow = isMobile ? 1 : 2;
+        // Assign some jquery elements we'll need
+        var $swiper = $(".swiper-container");
+        var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
+        // into a fixed position for animation purposes
+        var $bottomSlideContent = null; // Slide content that gets passed between the
+        // panning slide stack and the position 'behind'
+        // the stack, needed for correct animation style
+
+        var mySwiper = new Swiper(".swiper-container", {
+          spaceBetween: 1,
+          slidesPerView: slidesToShow,
+          centeredSlides: true,
+          roundLengths: true,
+          loop: true,
+          loopAdditionalSlides: 30,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 3000, // Thời gian chờ giữa các slide (ms)
+            disableOnInteraction: false, // Tự động chuyển slide sau khi người dùng tương tác (true) hoặc không (false)
+          },
+        });
+        console.log(mySwiper);
+        console.log(document);
+      });
+    </script>
+
+    <div
+      class="fixed-bottom row footer"
+      style="
+        height: 80px;
+        background-color: #fff;
+        border-top: 5px solid whitesmoke;
+      "
+    >
+      <div class="col-4 col-sm-4 flex">
+        <div class="col-6 col-sm-6 m-auto" style="padding: 0">
+          <p class="flex content-center">
+            <i class="fas fa-store icon-footer"></i>
+          </p>
+          <p class="store text-center">Cửa hàng</p>
+        </div>
+        <div class="col-6 col-sm-6 m-auto" style="padding: 0">
+          <a
+            href="https://www.facebook.com/MaiTien.A6K49LeHoan"
+            style="color: #000"
+          >
+            <p class="flex content-center">
+              <i class="fab fa-rocketchat icon-footer"></i>
+            </p>
+            <p class="chat text-center">Trò chuyện</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-4 m-auto flex content-center">
+        <button
+          type="button"
+          class="wrapper outline small"
+          style="font-size: 13px; padding: 6px 14px; height: 50px"
+          data-toggle="modal"
+          data-target="#ModalCenter"
+        >
+          Nhận ưu đãi giảm giá 50%
+        </button>
+      </div>
+      <div class="col-4 col-sm-4 m-auto flex content-center">
+        <button
+          type="button"
+          class="wrapper primary"
+          data-toggle="modal"
+          data-target="#ModalCenter"
+          style="font-size: 17px; padding: 6px 14px; height: 50px"
+        >
+          Mua ngay
+        </button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+  </body>
+</html>
